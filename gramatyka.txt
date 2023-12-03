@@ -1,0 +1,55 @@
+S -> G''S | ε
+G'' -> gG'e | ε...
+G' -> WG' | W | ε...
+G -> WG | WK | W | ε...
+W -> a...
+
+
+
+Gramatyka tylko dla krawędzi
+K -> sAe
+A -> CV | VC
+V -> c | ε
+C -> v | ε
+
+
+
+
+
+
+
+Symbole nieterminalne:
+S - symbol startowy
+G - symbol grafu
+W - symbol wierzchołka
+K - symbol krawędzi
+
+Symbole terminalne:
+e - 'end'
+g - 'graph'
+s - 'set edge'
+c - 'color'
+v - 'value'
+
+// add vertex wrzuca nas do edycji wierzchołka \albo/ trzeba wywołać modify w późniejszym momencie
+
+graph G
+    add vertex abb
+    add vertex abc
+    modify abb
+        color blue
+        value 10
+        ...
+    end
+    set edge abb abc
+        color green
+        value 5
+        ...
+    end
+end
+graph H
+    ...
+end
+
+Możliwości wyrazów:
+ε, ge, gege, gege..., gwe, gwwe, gwmwe, gwwmme, gwwseme,

@@ -18,3 +18,5 @@ def main(argv):
 
 if __name__ == '__main__':
     main(sys.argv)
+
+# antlr4-parse Expr.g4 _start -tree# antlr4 -v 4.13.0 -Dlanguage=Python3 Expr.g4# python Driver.py input.txt

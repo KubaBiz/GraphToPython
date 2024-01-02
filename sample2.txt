@@ -1,0 +1,11 @@
+graph gg
+    add vertex abb
+    add vertex abc
+    add vertex abd
+    add vertex aaa
+end
+graph G2
+    add vertex abc
+    add vertex abd
+    add vertex aaa
+end

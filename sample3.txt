@@ -1,0 +1,10 @@
+graph gg
+    add vertex abb
+    add vertex abc
+    modify abb
+    [color: blue distance:yellow gruby:no]
+    end
+    set edge abb abc
+    [color: blue distance:yellow gruby:no]
+    end
+end

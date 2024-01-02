@@ -1,20 +1,25 @@
 import sys
 from antlr4 import *
-from ExprLexer import ExprLexer
-from ExprParser import ExprParser
+from GraphsLexer import GraphsLexer
+from GraphsParser import GraphsParser
+from antlr4.tree.Trees import Trees
 #from VisitorInterp import VisitorInterp
 
 def main(argv):
     input_stream = FileStream(argv[1])
-    lexer = ExprLexer(input_stream)
+    lexer = GraphsLexer(input_stream)
     stream = CommonTokenStream(lexer)
-    parser = ExprParser(stream)
-    tree = parser.start_()
-    print(input_stream)
-    print(lexer)
-    for token in stream.tokens:
-        print(token, end=" ")
-    print(parser)
+    parser = GraphsParser(stream)
+    tree = parser.s()
+    if parser.getNumberOfSyntaxErrors() > 0:
+        print("syntax errors")
+    else:
+        pass
+    print(Trees.toStringTree(tree, None, parser))
+    
+    # code_generator = CodeGenerator()
+    # result = code_generator.visit(tree)
+    # print(f"Generated Python code: {result}")
 
 if __name__ == '__main__':
     main(sys.argv)

@@ -1,0 +1,6 @@
+graph G1
+    add vertex abb
+    add vertex abc
+end
+graph G2
+end

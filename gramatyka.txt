@@ -13,7 +13,7 @@ S - symbol startowy
 G, A, A', W, K, M, E
 
 Symbole terminalne:
-<name> = '<litera>{ <litera> | <cyfra> }'
+<name> = '<litera>{ <litera> | <liczba> }'
 <value> = '<liczba> | <name>'
 <graph> = 'graph <name>'
 <vertex> = 'add vertex <name>'

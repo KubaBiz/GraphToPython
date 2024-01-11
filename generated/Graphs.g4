@@ -2,11 +2,11 @@ grammar Graphs;
 options {  }
 
 s
-    : graph a 'end' g
+    : graph a end g
     | ;
 
 g
-    : graph a 'end' g
+    : graph a end g
     | ;
 
 a

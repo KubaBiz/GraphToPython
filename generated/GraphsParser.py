@@ -24,29 +24,29 @@ def serializedATN():
         1,0,0,0,10,75,1,0,0,0,12,77,1,0,0,0,14,81,1,0,0,0,16,85,1,0,0,0,
         18,89,1,0,0,0,20,91,1,0,0,0,22,94,1,0,0,0,24,97,1,0,0,0,26,100,1,
         0,0,0,28,104,1,0,0,0,30,118,1,0,0,0,32,120,1,0,0,0,34,122,1,0,0,
-        0,36,37,3,20,10,0,37,38,3,4,2,0,38,39,5,1,0,0,39,40,3,2,1,0,40,43,
-        1,0,0,0,41,43,1,0,0,0,42,36,1,0,0,0,42,41,1,0,0,0,43,1,1,0,0,0,44,
-        45,3,20,10,0,45,46,3,4,2,0,46,47,5,1,0,0,47,48,3,2,1,0,48,51,1,0,
-        0,0,49,51,1,0,0,0,50,44,1,0,0,0,50,49,1,0,0,0,51,3,1,0,0,0,52,53,
-        3,8,4,0,53,54,3,6,3,0,54,5,1,0,0,0,55,58,3,10,5,0,56,58,1,0,0,0,
-        57,55,1,0,0,0,57,56,1,0,0,0,58,7,1,0,0,0,59,60,3,22,11,0,60,61,3,
-        8,4,0,61,64,1,0,0,0,62,64,1,0,0,0,63,59,1,0,0,0,63,62,1,0,0,0,64,
-        9,1,0,0,0,65,66,3,22,11,0,66,67,3,10,5,0,67,76,1,0,0,0,68,69,3,12,
-        6,0,69,70,3,10,5,0,70,76,1,0,0,0,71,72,3,14,7,0,72,73,3,10,5,0,73,
-        76,1,0,0,0,74,76,1,0,0,0,75,65,1,0,0,0,75,68,1,0,0,0,75,71,1,0,0,
-        0,75,74,1,0,0,0,76,11,1,0,0,0,77,78,3,24,12,0,78,79,3,28,14,0,79,
-        80,5,1,0,0,80,13,1,0,0,0,81,82,3,26,13,0,82,83,3,28,14,0,83,84,5,
-        1,0,0,84,15,1,0,0,0,85,86,5,9,0,0,86,17,1,0,0,0,87,90,3,34,17,0,
-        88,90,3,16,8,0,89,87,1,0,0,0,89,88,1,0,0,0,90,19,1,0,0,0,91,92,5,
-        2,0,0,92,93,3,16,8,0,93,21,1,0,0,0,94,95,5,3,0,0,95,96,3,16,8,0,
-        96,23,1,0,0,0,97,98,5,4,0,0,98,99,3,16,8,0,99,25,1,0,0,0,100,101,
-        5,5,0,0,101,102,3,16,8,0,102,103,3,16,8,0,103,27,1,0,0,0,104,111,
-        5,6,0,0,105,106,3,16,8,0,106,107,5,7,0,0,107,108,3,30,15,0,108,110,
-        1,0,0,0,109,105,1,0,0,0,110,113,1,0,0,0,111,109,1,0,0,0,111,112,
-        1,0,0,0,112,114,1,0,0,0,113,111,1,0,0,0,114,115,5,8,0,0,115,29,1,
-        0,0,0,116,119,3,34,17,0,117,119,3,16,8,0,118,116,1,0,0,0,118,117,
-        1,0,0,0,119,31,1,0,0,0,120,121,5,1,0,0,121,33,1,0,0,0,122,123,5,
-        10,0,0,123,35,1,0,0,0,8,42,50,57,63,75,89,111,118
+        0,36,37,3,20,10,0,37,38,3,4,2,0,38,39,3,32,16,0,39,40,3,2,1,0,40,
+        43,1,0,0,0,41,43,1,0,0,0,42,36,1,0,0,0,42,41,1,0,0,0,43,1,1,0,0,
+        0,44,45,3,20,10,0,45,46,3,4,2,0,46,47,3,32,16,0,47,48,3,2,1,0,48,
+        51,1,0,0,0,49,51,1,0,0,0,50,44,1,0,0,0,50,49,1,0,0,0,51,3,1,0,0,
+        0,52,53,3,8,4,0,53,54,3,6,3,0,54,5,1,0,0,0,55,58,3,10,5,0,56,58,
+        1,0,0,0,57,55,1,0,0,0,57,56,1,0,0,0,58,7,1,0,0,0,59,60,3,22,11,0,
+        60,61,3,8,4,0,61,64,1,0,0,0,62,64,1,0,0,0,63,59,1,0,0,0,63,62,1,
+        0,0,0,64,9,1,0,0,0,65,66,3,22,11,0,66,67,3,10,5,0,67,76,1,0,0,0,
+        68,69,3,12,6,0,69,70,3,10,5,0,70,76,1,0,0,0,71,72,3,14,7,0,72,73,
+        3,10,5,0,73,76,1,0,0,0,74,76,1,0,0,0,75,65,1,0,0,0,75,68,1,0,0,0,
+        75,71,1,0,0,0,75,74,1,0,0,0,76,11,1,0,0,0,77,78,3,24,12,0,78,79,
+        3,28,14,0,79,80,5,1,0,0,80,13,1,0,0,0,81,82,3,26,13,0,82,83,3,28,
+        14,0,83,84,5,1,0,0,84,15,1,0,0,0,85,86,5,9,0,0,86,17,1,0,0,0,87,
+        90,3,34,17,0,88,90,3,16,8,0,89,87,1,0,0,0,89,88,1,0,0,0,90,19,1,
+        0,0,0,91,92,5,2,0,0,92,93,3,16,8,0,93,21,1,0,0,0,94,95,5,3,0,0,95,
+        96,3,16,8,0,96,23,1,0,0,0,97,98,5,4,0,0,98,99,3,16,8,0,99,25,1,0,
+        0,0,100,101,5,5,0,0,101,102,3,16,8,0,102,103,3,16,8,0,103,27,1,0,
+        0,0,104,111,5,6,0,0,105,106,3,16,8,0,106,107,5,7,0,0,107,108,3,30,
+        15,0,108,110,1,0,0,0,109,105,1,0,0,0,110,113,1,0,0,0,111,109,1,0,
+        0,0,111,112,1,0,0,0,112,114,1,0,0,0,113,111,1,0,0,0,114,115,5,8,
+        0,0,115,29,1,0,0,0,116,119,3,34,17,0,117,119,3,16,8,0,118,116,1,
+        0,0,0,118,117,1,0,0,0,119,31,1,0,0,0,120,121,5,1,0,0,121,33,1,0,
+        0,0,122,123,5,10,0,0,123,35,1,0,0,0,8,42,50,57,63,75,89,111,118
     ]
 
 class GraphsParser ( Parser ):
@@ -126,6 +126,10 @@ class GraphsParser ( Parser ):
             return self.getTypedRuleContext(GraphsParser.AContext,0)
 
 
+        def end(self):
+            return self.getTypedRuleContext(GraphsParser.EndContext,0)
+
+
         def g(self):
             return self.getTypedRuleContext(GraphsParser.GContext,0)
 
@@ -133,13 +137,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_s
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterS" ):
-                listener.enterS(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitS" ):
-                listener.exitS(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitS" ):
+                return visitor.visitS(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -159,7 +161,7 @@ class GraphsParser ( Parser ):
                 self.state = 37
                 self.a()
                 self.state = 38
-                self.match(GraphsParser.T__0)
+                self.end()
                 self.state = 39
                 self.g()
                 pass
@@ -194,6 +196,10 @@ class GraphsParser ( Parser ):
             return self.getTypedRuleContext(GraphsParser.AContext,0)
 
 
+        def end(self):
+            return self.getTypedRuleContext(GraphsParser.EndContext,0)
+
+
         def g(self):
             return self.getTypedRuleContext(GraphsParser.GContext,0)
 
@@ -201,13 +207,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_g
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterG" ):
-                listener.enterG(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitG" ):
-                listener.exitG(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitG" ):
+                return visitor.visitG(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -227,7 +231,7 @@ class GraphsParser ( Parser ):
                 self.state = 45
                 self.a()
                 self.state = 46
-                self.match(GraphsParser.T__0)
+                self.end()
                 self.state = 47
                 self.g()
                 pass
@@ -265,13 +269,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_a
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterA" ):
-                listener.enterA(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitA" ):
-                listener.exitA(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitA" ):
+                return visitor.visitA(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -309,13 +311,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_aa
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAa" ):
-                listener.enterAa(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAa" ):
-                listener.exitAa(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAa" ):
+                return visitor.visitAa(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -367,13 +367,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_w
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterW" ):
-                listener.enterW(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitW" ):
-                listener.exitW(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitW" ):
+                return visitor.visitW(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -435,13 +433,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_k
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterK" ):
-                listener.enterK(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitK" ):
-                listener.exitK(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitK" ):
+                return visitor.visitK(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -509,13 +505,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_m
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterM" ):
-                listener.enterM(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitM" ):
-                listener.exitM(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitM" ):
+                return visitor.visitM(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -559,13 +553,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_e
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterE" ):
-                listener.enterE(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitE" ):
-                listener.exitE(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitE" ):
+                return visitor.visitE(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -604,13 +596,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_name
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterName" ):
-                listener.enterName(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitName" ):
-                listener.exitName(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitName" ):
+                return visitor.visitName(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -650,13 +640,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_value
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterValue" ):
-                listener.enterValue(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitValue" ):
-                listener.exitValue(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitValue" ):
+                return visitor.visitValue(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -705,13 +693,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_graph
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterGraph" ):
-                listener.enterGraph(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitGraph" ):
-                listener.exitGraph(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitGraph" ):
+                return visitor.visitGraph(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -749,13 +735,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_vertex
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterVertex" ):
-                listener.enterVertex(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitVertex" ):
-                listener.exitVertex(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitVertex" ):
+                return visitor.visitVertex(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -793,13 +777,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_modify
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterModify" ):
-                listener.enterModify(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitModify" ):
-                listener.exitModify(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitModify" ):
+                return visitor.visitModify(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -840,13 +822,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_edge
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEdge" ):
-                listener.enterEdge(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEdge" ):
-                listener.exitEdge(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEdge" ):
+                return visitor.visitEdge(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -896,13 +876,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_attributes
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterAttributes" ):
-                listener.enterAttributes(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitAttributes" ):
-                listener.exitAttributes(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAttributes" ):
+                return visitor.visitAttributes(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -959,13 +937,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_choose
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterChoose" ):
-                listener.enterChoose(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitChoose" ):
-                listener.exitChoose(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitChoose" ):
+                return visitor.visitChoose(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1011,13 +987,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_end
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEnd" ):
-                listener.enterEnd(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEnd" ):
-                listener.exitEnd(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEnd" ):
+                return visitor.visitEnd(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1052,13 +1026,11 @@ class GraphsParser ( Parser ):
         def getRuleIndex(self):
             return GraphsParser.RULE_liczba
 
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterLiczba" ):
-                listener.enterLiczba(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitLiczba" ):
-                listener.exitLiczba(self)
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLiczba" ):
+                return visitor.visitLiczba(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 

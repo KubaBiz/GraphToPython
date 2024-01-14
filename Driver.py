@@ -11,6 +11,7 @@ class CodeGenerator(GraphsVisitor):
         self.output_path = output_path
         self.output_file = open(output_path, "w")
         self.output_file.write("import networkx as nx\n")
+        self.output_file.write("import matplotlib\n")
         self.output_file.write("import copy as cp\n\n\n")
         # self.output_file.write("\n\ndef main():\n")
         self.current_graph = None
@@ -55,6 +56,7 @@ class CodeGenerator(GraphsVisitor):
         self.visitChildren(ctx)
 
     def visitEnd_graph(self, ctx:GraphsParser.End_graphContext):
+        self.output_file.write(f'nx.draw({self.current_graph})\n\n')
         self.current_graph = None
         self.available_nodes = []
 

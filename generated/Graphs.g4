@@ -2,11 +2,11 @@ grammar Graphs;
 options {  }
 
 s
-    : graph a end g
+    : graph a end_graph g
     | ;
 
 g
-    : graph a end g
+    : graph a end_graph g
     | ;
 
 a
@@ -17,11 +17,11 @@ aa
     | ;
 
 w
-    : vertex w 
+    : node w 
     | ;
 
 k
-    : vertex k
+    : node k
     | m k
     | e k 
     | ;
@@ -32,40 +32,45 @@ m
 e
     : edge attributes 'end';
 
-ID
-    : [a-zA-Z_] [a-zA-Z_0-9]*;
-
-name
-    : ID;
-
-
-value
-    : liczba
-    | name;
-
 graph 
-    : 'graph' name;
+    : 'graph' name extend;
 
-vertex
-    : 'add vertex' name;
+extend
+    : 'extends' name
+    | ;
+
+node
+    : 'add node' name;
 
 modify
     : 'modify' name;
 
 edge
-    : 'set edge' name name;
+    : 'set edge' dest_node dest_node;
 
 attributes
-    : '[' (name ':' choose )* ']';
+    : '[' (name ':' value )* ']';
 
-choose
-    : liczba | name ;   
+value
+    : number | name;  
 
-end
+dest_node
+    : '*' | name;
+
+end_graph
     : 'end';
 
-liczba 
+name
+    : ID;
+
+number 
     : INT;
 
-INT : [0-9]+ ;
-White_spaces : [ \t\n\r]+ -> skip;
+ID 
+    : [a-zA-Z_] [a-zA-Z_0-9]*;
+
+INT 
+    : [0-9]+;
+
+White_spaces 
+    : [ \t\n\r]+ -> skip;

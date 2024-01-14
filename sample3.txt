@@ -1,6 +1,6 @@
 graph gg
-    add vertex abb
-    add vertex abc
+    add node abb
+    add node abc
     modify abb
     [color: blue distance:yellow gruby:no]
     end

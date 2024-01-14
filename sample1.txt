@@ -1,6 +1,6 @@
 graph G1
-    add vertex abb
-    add vertex abc
+    add node abb
+    add node abc
 end
-graph G2
+graph G2 extends G1
 end

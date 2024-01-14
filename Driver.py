@@ -4,25 +4,44 @@ from generated.GraphsLexer import GraphsLexer
 from generated.GraphsParser import GraphsParser
 from generated.GraphsVisitor import GraphsVisitor
 from antlr4.tree.Trees import Trees
-#from VisitorInterp import VisitorInterp
+
 
 class CodeGenerator(GraphsVisitor):
     def __init__(self, output_path):
-        # init code generator
         self.output_path = output_path
         self.output_file = open(output_path, "w")
         self.output_file.write("import networkx as nx\n")
+        self.output_file.write("import copy as cp\n\n\n")
         # self.output_file.write("\n\ndef main():\n")
-        self.graph_name = None
+        self.current_graph = None
+        self.available_graphs = [] # potrzebne do extends
+        self.available_nodes = [] # potrzebne do tworzenia krawędzi
 
     def visitGraph(self, ctx:GraphsParser.GraphContext):
-        self.graph_name = ctx.getChild(1).getText()
-        self.output_file.write(f"{self.graph_name} = nx.Graph()\n")
+        self.current_graph = ctx.getChild(1).getText()
+        if ctx.getChild(2).getText() != "":
+            extend_graph = ctx.getChild(2).getChild(1).getText()
+        else:
+            extend_graph = None
+        if extend_graph in self.available_graphs:
+            self.output_file.write(f"{self.current_graph} = cp.deepcopy({extend_graph})\n")
+        elif extend_graph != None:
+            self.output_file.write(f"#ERROR No Graph to copy named \'{extend_graph}\'\n")
+            self.output_file.write(f"{self.current_graph} = nx.Graph()\n")
+        else:
+            self.output_file.write(f"{self.current_graph} = nx.Graph()\n")
+        self.available_graphs.append(self.current_graph)
+        print(self.available_graphs)
         self.visitChildren(ctx)
 
-    def visitVertex(self, ctx:GraphsParser.VertexContext):
+    def visitNode(self, ctx:GraphsParser.NodeContext):
         name = ctx.getChild(1).getText()
-        self.output_file.write(f'{self.graph_name}.add_node("{name}")\n')
+        if name in self.available_nodes:
+            self.output_file.write(f'#ERROR There is already Node named \'{name}\'\n')
+        else:
+            self.output_file.write(f'{self.current_graph}.add_node("{name}")\n')
+            self.available_nodes.append(name)
+        print(self.available_nodes)
         self.visitChildren(ctx)
 
     def visitM(self, ctx:GraphsParser.MContext):
@@ -32,31 +51,28 @@ class CodeGenerator(GraphsVisitor):
         for i in range(0,len(attributes), 2):
             pass
         print(node_name, attributes)
-        self.output_file.write(f'{self.graph_name}.add_node("")\n')
+        self.output_file.write(f'{self.current_graph}.add_node("")\n')
         self.visitChildren(ctx)
 
-    def visitEnd(self, ctx:GraphsParser.EndContext):
-        self.graph_name = None
+    def visitEnd_graph(self, ctx:GraphsParser.End_graphContext):
+        self.current_graph = None
+        self.available_nodes = []
+
 def main(argv):
     input_stream = FileStream(argv[1])
-    print(argv[1])
     lexer = GraphsLexer(input_stream)
     stream = CommonTokenStream(lexer)
     parser = GraphsParser(stream)
     tree = parser.s()
     if parser.getNumberOfSyntaxErrors() > 0:
-        print("syntax errors")
+        print("Syntax errors in file " + argv[1])
     else:
         pass
-    print(Trees.toStringTree(tree, None, parser))
+    print(Trees.toStringTree(tree, None, parser)) # do usunięcia po skończeniu
     
     outputPath = argv[1].split(".")[0] + ".py"
-    print(outputPath)
     visitor = CodeGenerator(outputPath)
     visitor.visit(tree)
-    # code_generator = CodeGenerator()
-    # result = code_generator.visit(tree)
-    # print(f"Generated Python code: {result}")
 
 if __name__ == '__main__':
     main(sys.argv)

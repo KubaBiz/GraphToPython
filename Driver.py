@@ -11,7 +11,7 @@ class CodeGenerator(GraphsVisitor):
         self.output_path = output_path
         self.output_file = open(output_path, "w")
         self.output_file.write("import networkx as nx\n")
-        self.output_file.write("import matplotlib\n")
+        self.output_file.write("import matplotlib.pyplot as plt\n")
         self.output_file.write("import copy as cp\n\n\n")
         # self.output_file.write("\n\ndef main():\n")
         self.current_graph = None
@@ -47,16 +47,52 @@ class CodeGenerator(GraphsVisitor):
 
     def visitM(self, ctx:GraphsParser.MContext):
         node_name = ctx.getChild(0).getChild(1).getText()
+
+        if node_name not in self.available_nodes:
+            self.output_file.write(f'#ERROR There is no Node to modify named \'{node_name}\'\n')
+            self.visitChildren(ctx)
+            return 
         attributes = [child.getText() for child in ctx.getChild(1).getChildren()][1:-1]
         attributes = list(filter(lambda x: x != ':', attributes))
         for i in range(0,len(attributes), 2):
-            pass
-        print(node_name, attributes)
-        self.output_file.write(f'{self.current_graph}.add_node("")\n')
+            name, value = attributes[i], attributes[i+1]
+            self.output_file.write(f'{self.current_graph}.nodes["{node_name}"]["{name}"] = "{value}"\n')
+
+        self.visitChildren(ctx)
+
+    def visitE(self, ctx:GraphsParser.EContext):
+        node1 = ctx.getChild(0).getChild(1).getText()
+        node2 = ctx.getChild(0).getChild(2).getText()
+        attributes = [child.getText() for child in ctx.getChild(1).getChildren()][1:-1]
+        attributes = list(filter(lambda x: x != ':', attributes))
+        dictionary = {}
+        for i in range(0,len(attributes), 2):
+            name, value = attributes[i], attributes[i+1]
+            dictionary[name] = value
+        print(dictionary)
+        if node1 == "*" and node2 == "*":
+            for v in range(len(self.available_nodes)):
+                for k in range(v+1, len(self.available_nodes)):
+                    self.output_file.write(f'{self.current_graph}.add_edge("{self.available_nodes[v]}", "{self.available_nodes[k]}", **{dictionary})\n')
+        elif node1 == "*" or node2 == "*":
+            node = node1 if node2 == "*" else node2
+            if node not in self.available_nodes:
+                self.output_file.write(f'#ERROR There is no Node to add edge named \'{node}\'\n')
+            else:
+                for v in range(len(self.available_nodes)):
+                    self.output_file.write(f'{self.current_graph}.add_edge("{node}", "{self.available_nodes[v]}", **{dictionary})\n')
+        else:
+            if node1 in self.available_nodes and node2 in self.available_nodes:
+                self.output_file.write(f'{self.current_graph}.add_edge("{node1}", "{node2}", **{dictionary})\n')
+            else:
+                self.output_file.write(f'#ERROR There is no Node to add edge named \'{node1}\' or \'{node2}\'\n')
+        
         self.visitChildren(ctx)
 
     def visitEnd_graph(self, ctx:GraphsParser.End_graphContext):
-        self.output_file.write(f'nx.draw({self.current_graph})\n\n')
+        self.output_file.write(f'nx.drawing.nx_pydot.write_dot({self.current_graph},"{self.output_path.split(".")[0]}{len(self.available_graphs)}.dot")\n')
+        self.output_file.write(f'nx.draw_networkx({self.current_graph})\n')
+        self.output_file.write(f'plt.show()\n\n')
         self.current_graph = None
         self.available_nodes = []
 

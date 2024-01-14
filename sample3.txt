@@ -1,10 +1,22 @@
 graph gg
     add node abb
     add node abc
+    add node abd
+    add node aaa
+    add node aaa
+    modify aaa
+    [color: red]
+    end
+    modify abe
+    [color: blue]
+    end
     modify abb
     [color: blue distance:yellow gruby:no]
     end
-    set edge abb abc
+    set edge * *
     [color: blue distance:yellow gruby:no]
     end
+end
+graph ab extends gg
+    add node ddd
 end

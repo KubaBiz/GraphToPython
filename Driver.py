@@ -13,7 +13,7 @@ class CodeGenerator(GraphsVisitor):
         self.output_file.write("import networkx as nx\n")
         self.output_file.write("import matplotlib.pyplot as plt\n")
         self.output_file.write("import copy as cp\n\n\n")
-        # self.output_file.write("\n\ndef main():\n")
+        # self.output_file.write("\n\ndef main():\n")<
         self.current_graph = None
         self.available_graphs = [] # potrzebne do extends
         self.available_nodes = [] # potrzebne do tworzenia krawędzi
@@ -80,6 +80,8 @@ class CodeGenerator(GraphsVisitor):
                 self.output_file.write(f'#ERROR There is no Node to add edge named \'{node}\'\n')
             else:
                 for v in range(len(self.available_nodes)):
+                    if node == self.available_nodes[v]:
+                        continue
                     self.output_file.write(f'{self.current_graph}.add_edge("{node}", "{self.available_nodes[v]}", **{dictionary})\n')
         else:
             if node1 in self.available_nodes and node2 in self.available_nodes:

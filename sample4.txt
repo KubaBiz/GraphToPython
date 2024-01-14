@@ -1,0 +1,18 @@
+graph G4
+    add node a0
+    add node a1
+    add node a2
+    add node a3
+    modify a2
+    [color: red]
+    end
+    modify a4
+    [color: blue]
+    end
+    set edge * a0
+    [weight: 5]
+    end
+end
+graph G5 extends G6
+    add node abc
+end

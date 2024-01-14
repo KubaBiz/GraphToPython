@@ -11,10 +11,10 @@ graph gg
     [color: blue]
     end
     modify abb
-    [color: blue distance:yellow gruby:no]
+    [color: blue entrance:no]
     end
     set edge * *
-    [color: blue distance:yellow gruby:no]
+    [color: blue distance:6 open:yes]
     end
 end
 graph ab extends gg

@@ -32,7 +32,6 @@ class CodeGenerator(GraphsVisitor):
         else:
             self.output_file.write(f"{self.current_graph} = nx.Graph()\n")
         self.available_graphs.append(self.current_graph)
-        print(self.available_graphs)
         self.visitChildren(ctx)
 
     def visitNode(self, ctx:GraphsParser.NodeContext):
@@ -42,7 +41,6 @@ class CodeGenerator(GraphsVisitor):
         else:
             self.output_file.write(f'{self.current_graph}.add_node("{name}")\n')
             self.available_nodes.append(name)
-        print(self.available_nodes)
         self.visitChildren(ctx)
 
     def visitM(self, ctx:GraphsParser.MContext):
@@ -69,7 +67,6 @@ class CodeGenerator(GraphsVisitor):
         for i in range(0,len(attributes), 2):
             name, value = attributes[i], attributes[i+1]
             dictionary[name] = value
-        print(dictionary)
         if node1 == "*" and node2 == "*":
             for v in range(len(self.available_nodes)):
                 for k in range(v+1, len(self.available_nodes)):
@@ -108,8 +105,7 @@ def main(argv):
         print("Syntax errors in file " + argv[1])
     else:
         pass
-    print(Trees.toStringTree(tree, None, parser)) # do usunięcia po skończeniu
-    
+        
     outputPath = argv[1].split(".")[0] + ".py"
     visitor = CodeGenerator(outputPath)
     visitor.visit(tree)
